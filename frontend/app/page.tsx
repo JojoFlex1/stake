@@ -1,11 +1,9 @@
-# Create page.tsx
-cat > app/page.tsx << 'EOL'
 "use client"
 
 import { useState } from "react"
 import { Wallet, Coins, ArrowRight, Check, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/cards"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Switch } from "@/components/ui/switch"
 
@@ -98,8 +96,7 @@ export default function Home() {
                     <Button
                       size="lg"
                       className="w-full bg-pink-600 hover:bg-pink-700 text-lg h-14"
-                      onClick={connectWallet}
-                    >
+                      onClick={connectWallet} title={""}                    >
                       <Wallet className="mr-2 h-5 w-5" />
                       Connect Ethereum Wallet
                     </Button>
@@ -247,4 +244,3 @@ function WalletContent({
     </div>
   )
 }
-EOL

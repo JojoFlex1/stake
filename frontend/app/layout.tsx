@@ -1,5 +1,4 @@
-# Create layout.tsx
-cat > app/layout.tsx << 'EOL'
+
 import type { Metadata } from "next"
 import "./globals.css"
 
@@ -19,4 +18,3 @@ export default function RootLayout({
     </html>
   )
 }
-EOL
