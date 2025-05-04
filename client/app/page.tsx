@@ -1,11 +1,12 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Wallet, Coins, ArrowRight, Check, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Switch } from "@/components/ui/switch"
+import { connectToPolkadot } from "@/lib/logic"
 
 // Mock data for demonstration
 const mockEthTokens = [
@@ -69,6 +70,10 @@ export default function Home() {
     .filter((token) => selectedTokens[token.name])
     .reduce((sum, token) => sum + token.value, 0)
     .toFixed(2)
+
+    useEffect(()=>{
+      connectToPolkadot('wss://westend-rpc.polkadot.io')
+    },[])
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
