@@ -39,7 +39,7 @@ No smart contracts. Just raw Polkadot SDK power.
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/polkadot-dust-staker.git
+git clone https://github.com/JojoFlex1/stake/tree/main
 cd stake ,cd client
 npm install
 npm run dev
